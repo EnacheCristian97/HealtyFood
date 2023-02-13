@@ -1,0 +1,10 @@
+.content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.row{
+    width: 800px;
+    min-width: 320px;
+}

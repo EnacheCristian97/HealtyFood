@@ -1,0 +1,21 @@
+<nav class="navbar">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand">HealtyFood</a>
+        </div>
+    </div>
+    
+    <div class="collapse">
+        <ul class="nav-left">
+            <li  routerLinkActive="active"><a routerLink="/recipes">Recipes</a></li>
+            <li routerLinkActive="active"><a routerLink="/shopping-list" >Shopping List</a></li>
+        </ul>
+        <div class="dropdown" appDropdown>
+                <button class="dropdown-btn">Manage</button>
+                <ul class="dropdown-menu">
+                    <li><a (click)="onSaveData()">Save Data</a></li>
+                    <li><a (click)="onFetchData()">Fetch Data</a></li>
+                </ul>  
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,10 @@
+.container{
+    height: 100%;
+    width: auto;
+    display: inline;
+    justify-content: center;
+}
+
+.row{
+    width: 100%;
+}

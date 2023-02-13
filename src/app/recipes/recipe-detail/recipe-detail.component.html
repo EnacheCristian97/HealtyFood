@@ -1,0 +1,38 @@
+<div class="row-deatil">
+<div class="image-recipe">
+    <div class="content">
+        <img [src]="recipe.imgPath">
+    </div>
+</div>
+<div class="row">
+    <div class="title">
+        <p>{{recipe.name}}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="desc">
+        {{recipe.description}}
+    </div>
+</div>
+<div class="row">
+    <div class="ingredients">
+        <ul>
+            <li *ngFor="let ingredeint of recipe.ingredients">
+                {{ingredeint.name}} - {{ingredeint.amount}}
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="row">
+    <div class="dropdown" appDropdown>
+        <button class="dropdown-btn"> Manage Recipe</button>
+        <ul class="dropdown-menu">
+            <li><a (click)="onAddToShoppingList()">To Shopping List</a></li>
+            <li><a (click)="onEditRecipe()">Edit</a></li>
+            <li><a (click)="onDeleteRecipe()">Delete</a></li>
+        </ul>
+    </div>
+</div>
+</div>
+
+

@@ -1,0 +1,148 @@
+input{
+    width: 100%;
+    margin: 0px;
+    min-height: 30px;
+    padding: 0px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+    border: 2px solid red ;
+}
+
+.success{
+    background-color: rgba(18, 189, 12, 0.529);
+    min-width: 100px;
+    min-height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    margin-right: 5px;
+    color: #ffffff;
+}
+
+.success:active{
+    transform: scale(0.9);
+}
+
+.danger{
+    background-color: rgba(189, 12, 12, 0.529);
+    min-width: 100px;
+    min-height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    margin-right: 5px;
+    color: #ffffff;
+}
+
+input:focus{
+    outline: none;
+    border: 2px solid rgba(18, 189, 12, 0.529);
+}
+.content{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+    margin-left: 5px;
+    background-color: #5656561a;
+    /* border: 1px solid rgba(157, 155, 155, 0.351); */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
+} */
+.row-form-group{
+    margin-bottom: 5px;
+
+}
+.row{
+    display: flex;
+    justify-content: center;
+    width: 700px;
+}
+
+.img-preview{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.img-preview img{
+    max-width: 600px;
+}
+
+.desc-form{
+    display: block;
+    align-items: center;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.desc-form label{
+    font-size: 18px;
+}
+
+.desc-form textarea{
+    width: 100%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    /* border: 2px solid #ccc; */
+    border-radius: 4px;
+    background-color: #efeded;
+    resize: none;
+    outline: none;
+}
+
+.desc-form textarea:focus{
+    border: 3px solid rgba(18, 189, 12, 0.529);
+}
+
+
+
+.ing{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4px;
+}
+
+.col-ing input{
+    width: 300px;
+    margin-right: 5px;
+}
+
+.col-amount{
+    width: 60px;
+    margin-right: 5px;
+}
+
+.col-btn .delete{
+    width: 100%;
+    height: 30px;
+    background-color: rgba(189, 12, 12, 0.529);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 2px;
+    color: #ccc;
+}

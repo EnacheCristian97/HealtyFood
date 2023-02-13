@@ -1,0 +1,21 @@
+<a  class="list-group-item"
+    [routerLink]="[index]"
+    routerLinkActive="active"
+>
+    <div class="left" routerLinkActive="active">
+        <div class="text">
+            <div class="text-desc">
+                <p class="title"> {{recipe.name}} </p>
+                <p class="desc">
+                    {{recipe.description}}
+                </p>
+            </div>
+        </div>
+        <span>
+            <img 
+            src="{{recipe.imgPath}}" 
+            alt="{{recipe.name}}"
+            >
+        </span>
+    </div>
+</a>
