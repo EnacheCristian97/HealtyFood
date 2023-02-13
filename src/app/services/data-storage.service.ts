@@ -2,8 +2,8 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { map, tap } from "rxjs/operators";
 
-import { Recipe } from "../recipes/recipe.model";
 import { RecipeService } from "./recipe.service";
+import { Recipe } from "../recipes/recipe.model";
 
 @Injectable()
 export class DataStorageService {
@@ -19,24 +19,29 @@ export class DataStorageService {
     }
 
     fetchRecipes() {
-       return this.http.get<Recipe[]>('https://healtyfoodapplication-default-rtdb.firebaseio.com/recipes.json')
-        .pipe(map(recipes =>{
-            return recipes.map( recipe => {
-                return {...recipe, ingredients: recipe.ingredients ? recipe.ingredients : []
-                };
-            });
-        }),
-            tap(recipes => {
-                this.recipeService.setRecipes(recipes);
-            })
-        )    
+        return this.http.get<Recipe[]>('https://healtyfoodapplication-default-rtdb.firebaseio.com/recipes.json')
+            .pipe(
+                map(recipes => {
+                    return recipes.map(recipe => {
+                        return {   
+                            ...recipe, ingredients : recipe.ingredients ? recipe.ingredients : []   
+                        };
+                    });
+                }),
+                tap(recipes => {
+                    this.recipeService.setRecipes(recipes);
+                })
+            )
     }
 
     editRecipe(index: number, recipe:Recipe) {
-        const recipes = this.recipeService.getRecipe(index);
-        this.http.put(('https://healtyfoodapplication-default-rtdb.firebaseio.com/recipes/'+ {index} + '.json'), recipes).subscribe(
-            response => {
-               response = recipe;
+        const recipeSelected = this.recipeService.getRecipe(index);
+        this.http.put(('https://healtyfoodapplication-default-rtdb.firebaseio.com/recipes/'+ index + '.json'), recipe).subscribe(
+            () => {
+               recipeSelected.name = recipe.name,
+               recipeSelected.description = recipe.description,
+               recipeSelected.imgPath = recipe.imgPath,
+               recipeSelected.ingredients = recipe.ingredients
             }
         )
     }
