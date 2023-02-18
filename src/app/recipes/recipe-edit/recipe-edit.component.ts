@@ -35,10 +35,10 @@ export class RecipeEditComponent implements OnInit {
       this.recipeForm.value['ingredients']);
     if(this.editMode) {
       const edit = this.dsService.editRecipe(this.id, newRecipe);
-      console.log(edit);
       this.recipeService.updateRecipe(this.id, newRecipe);
     } else {
       this.recipeService.addRecipe(newRecipe);
+      this.dsService.storeRecipes();
     }
     this.onCancel();
   }
