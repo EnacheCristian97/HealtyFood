@@ -1,0 +1,148 @@
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/bk-login.jpg");
+    background-size:cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    position: fixed;
+    z-index: -1;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    height: 800px;
+}
+
+.alert{
+    position: absolute;
+    text-align: center;
+    align-items: center;
+    top: calc(20% - 50px);
+    left: calc(50% - 5px);
+    transform: translate(-50%,-50%);
+    width: 500px;
+    height: 40px;
+    background: #f25f5fb3;
+    color: #b30303;
+    border: 1px solid #b30303;
+    border-radius: 10px;
+}
+
+form{
+    border: 1px solid #d0cece;
+    border-right: none;
+    border-bottom: none;
+    padding: 80px;
+    border-radius: 10px;
+    box-shadow: 8px 8px 8px 5px #28282877;
+    background: white;
+}
+
+.form__logo {
+    display: flex;
+    justify-content: center;
+    background-image: url("../images/healtyfood-logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    width: auto;
+    height: 150px;
+}
+
+.title {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-group__label {
+    display: block;
+    text-align: left;
+    padding-left: 20px;
+    font-size: 18px;
+}
+
+.form-group__input {
+    min-width:400px;
+    min-height: 40px;
+    background: #d0cece53;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 15px;
+    box-shadow: 3px 3px 2px 2px #28282832;
+}
+
+.form-group__input:focus,
+.form-group__input:active{
+    outline:2px solid #4bee4b85;
+}
+
+.buttons{
+    display: block;
+    align-items: center;
+}
+
+
+.btn {
+    min-width: 200px;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid #4bee4b;
+    background-color: #4bee4b;
+    color: #fff;
+    font-size: 18px;
+    margin: 5px;
+}
+
+
+.btn-reg{
+    background-color: #4bd3ee;
+    border: 2px solid #4bd3ee;
+}
+
+.btn:hover {
+    border: 2px solid #4bee4b;
+    background: #fff;
+    color: #4bee4b;  
+}
+
+.btn-reg:hover{
+    border: 2px solid #4bd3ee;
+    color: #4bd3ee;
+}
+
+.btn:active {
+    transform: scale(0.9);
+}
+
+.btn:disabled {
+    background: #9c9898;
+    border: 2px solid #9c9898;
+    color: #fff;
+    cursor: not-allowed;
+}
