@@ -1,10 +1,23 @@
 .content{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+    margin-top: 5.5rem;
 }
 .row{
-    width: 800px;
-    min-width: 320px;
+    margin: auto;
+    vertical-align: middle;
+    width: 70vw;
+    height: 100vh;
 }
+
+.item-detail{
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    display: block;
+    z-index: 150;
+}
+
+

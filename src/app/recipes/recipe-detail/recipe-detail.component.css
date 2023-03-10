@@ -3,58 +3,82 @@
     padding: 0;
     box-sizing: border-box;
 }
-.row-deatil{
-    padding: 10px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+.detail-card{
+    display: flex;
+    box-shadow: 0px 0px 16px 10px rgba(0,0,0,0.5);
+    background-color: #dcd8d8;
+    width: 50vw;
+    height: 65vh;
     margin-top: 5px;
     margin-left: 5px;
-    border-radius: 10px;
+    z-index: 102;
 }
-.image-recipe {
-    width: 100%;
+.detail-card__image-recipe {
+    width: 45%;
     height: 100%;
 
 }
 
-.content{
-    width: 100%;
-    height: 500px;
-    display: flex;
-    justify-content: center;
-  
+.detail-card__image-recipe img {
+   width: 100%;
+   height: 100%;
+   margin: auto;
 }
 
-.content img {
-    max-width: 400px;
-    max-height: 400px;
-    border-radius: 15px;
+.detail-card__info{
+  width: 65%;
+  margin-top: 2rem;
+  padding: 1rem;
 }
 
-.row{
-    display: flex;
-    justify-content: center;
+.info-micro{
+  display: flex;
+  font-size: 0.9rem;
+  margin-top: 0.2rem;
+  color: #555;
 }
 
-.title{
+.info-micro p {
+  margin-right: 0.5rem;
+}
+
+.detail-card__info .title{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 25px;
+    font-size: 2rem;
 }
 
-.desc{
+.detail-card__info .desc{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 1.5;
+    margin-top: 1rem;
+}
+
+.detail-card__info .ingredients-list {
+  display: flex;
+  width: 100%;
+  margin-top: 0.5rem;
+  list-style:none;
+
+}
+
+.ingredients-list-item{
+  font-size: 1.1rem;
+  margin-right: 0.5rem;
+  color: #555;
 }
 
 .dropdown {
-  position: relative;
+  position: absolute;
   display: inline-block;
-  margin-right: 10px;
+  top: 0.5rem;
+  left: 0.5rem;
 }
 .dropdown ul {
   display: none;
   list-style: none;
   text-align: center;
   align-items: center;
+  left: 0;
 }
 
 .dropdown ul li {
@@ -75,7 +99,7 @@
 }
 
 .dropdown-btn {
-  background-color: rgba(5, 174, 83, 0.763);
+  background-color: rgba(5, 174, 84, 0.975);
   color: white;
   padding: 16px;
   font-size: 16px;
@@ -99,3 +123,24 @@
 }
 
 .dropdown-menu a:hover {background-color: #ddd;}
+
+.close{
+  position: absolute;
+  text-align: center;
+  vertical-align: middle;
+  width: 2rem;
+  height: 2rem; 
+  right:0.5rem;
+  top: 0.5rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  border: none;
+  color: #29b965;
+  background-color: transparent;
+}
+.close:hover{
+  color: #03f668;
+}
+.close:active{
+  transform: scale(0.9);
+}

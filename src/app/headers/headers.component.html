@@ -12,11 +12,11 @@
             <li routerLinkActive="active"><a routerLink="/shopping-list" >Shopping List</a></li>
         </ul>
         <div class="dropdown" appDropdown *ngIf="isAuthenticated">
-                <button class="dropdown-btn">Manage</button>
+                <button class="dropdown-btn">{{userName}}</button>
                 <ul class="dropdown-menu">
                     <li><a (click)="onSaveData()">Save Data</a></li>
                     <li><a (click)="onFetchData()">Fetch Data</a></li>
-                    <li><a>Logout</a></li>
+                    <li><a (click)="onLogout()">Logout</a></li>
                 </ul>  
         </div>
     </div>

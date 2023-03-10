@@ -1,4 +1,7 @@
 .btn{
+    position: fixed;
+    right: 0;
+    bottom: 0;
     background-color: rgba(5, 174, 83, 0.763);
     width: 200px;
     height: 80px;
@@ -10,8 +13,7 @@
 }
 
 .row{
-    margin-left: 5px;
+    display: relative;
+    margin: 10px;
 }
-
-
 

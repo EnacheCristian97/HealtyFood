@@ -1,21 +1,23 @@
-<a  class="list-group-item"
+<a  class="list-group-items"
     [routerLink]="[index]"
     routerLinkActive="active"
 >
-    <div class="left" routerLinkActive="active">
-        <div class="text">
-            <div class="text-desc">
-                <p class="title"> {{recipe.name}} </p>
-                <p class="desc">
-                    {{recipe.description}}
-                </p>
-            </div>
-        </div>
-        <span>
-            <img 
+    <div class="list-group-item" routerLinkActive="active">
+            <img class="item-img"
             src="{{recipe.imgPath}}" 
             alt="{{recipe.name}}"
             >
-        </span>
+        <div class="item-desc">
+            <button class="btn-like"><fa-icon [icon]="faHeart"></fa-icon></button>
+            <div class="item-desc-micro">
+                <p class="item-desc-micro__item"><fa-icon [icon]="faTimer"></fa-icon>15 mins</p>
+                <p class="item-desc-micro__item"><fa-icon [icon]="faPlate"></fa-icon>1 servings</p>
+                <p class="item-desc-micro__item"><fa-icon [icon]="faThumbsUp"></fa-icon>12 likes</p> 
+            </div>
+            <div class="item-desc-info">
+                <p class="title"> {{recipe.name}} </p>
+                <p class="desc">{{recipe.description}}</p>
+            </div>
+        </div>
     </div>
 </a>

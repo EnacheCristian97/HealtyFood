@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
+import { faArrowLeft,faCheck,faClock, faPlateWheat, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import { RecipeService } from 'src/app/services/recipe.service';
 import { Recipe } from '../recipe.model';
 
@@ -11,6 +12,11 @@ import { Recipe } from '../recipe.model';
 export class RecipeDetailComponent implements OnInit {
   recipe: Recipe;
   id: number;
+  faThumbsUp = faThumbsUp;
+  faPlate = faPlateWheat;
+  faTimer = faClock;
+  faBackward = faArrowLeft;
+  faCheck = faCheck;
 
   constructor(private recipeService: RecipeService, 
     private route: ActivatedRoute,
@@ -24,6 +30,10 @@ export class RecipeDetailComponent implements OnInit {
       }
     )
     
+  }
+
+  onClose(){
+    this.router.navigate(['/recipes']);
   }
 
   onAddToShoppingList(){

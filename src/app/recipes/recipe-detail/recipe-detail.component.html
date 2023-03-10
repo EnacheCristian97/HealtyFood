@@ -1,29 +1,31 @@
-<div class="row-deatil">
-<div class="image-recipe">
-    <div class="content">
+<div class="detail-card">
+    <button class="close" (click)="onClose()"><fa-icon [icon]="faBackward"></fa-icon></button>
+<div class="detail-card__image-recipe">
         <img [src]="recipe.imgPath">
-    </div>
 </div>
-<div class="row">
+<div class="detail-card__info">
     <div class="title">
         <p>{{recipe.name}}</p>
     </div>
-</div>
-<div class="row">
+    <div class="info-micro">
+        <p class="item-desc-micro__item"><fa-icon [icon]="faTimer"></fa-icon>15 mins</p>
+        <p class="item-desc-micro__item"><fa-icon [icon]="faPlate"></fa-icon>1 servings</p>
+        <p class="item-desc-micro__item"><fa-icon [icon]="faThumbsUp"></fa-icon>12 likes</p>
+    </div>
     <div class="desc">
         {{recipe.description}}
     </div>
-</div>
-<div class="row">
     <div class="ingredients">
-        <ul>
-            <li *ngFor="let ingredeint of recipe.ingredients">
-                {{ingredeint.name}} - {{ingredeint.amount}}
+        <ul class="ingredients-list">
+            <li class="ingredients-list-item" *ngFor="let ingredeint of recipe.ingredients">
+                <fa-icon [icon]="faCheck"></fa-icon>{{ingredeint.name}} - {{ingredeint.amount}}
             </li>
         </ul>
     </div>
+    <div class="detail-card__prep">
+        <h3>Preparation steps</h3>
+    </div>
 </div>
-<div class="row">
     <div class="dropdown" appDropdown>
         <button class="dropdown-btn"> Manage Recipe</button>
         <ul class="dropdown-menu">
@@ -33,6 +35,6 @@
         </ul>
     </div>
 </div>
-</div>
+
 
 
