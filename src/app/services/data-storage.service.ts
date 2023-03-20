@@ -43,6 +43,7 @@ export class DataStorageService {
                recipeSelected.description = recipe.description,
                recipeSelected.imgPath = recipe.imgPath,
                recipeSelected.ingredients = recipe.ingredients
+               recipeSelected.likes = recipe.likes
             }
         )
     }

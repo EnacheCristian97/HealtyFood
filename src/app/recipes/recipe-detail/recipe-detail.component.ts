@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { faArrowLeft,faCheck,faClock, faPlateWheat, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
+import { Subscription } from 'rxjs';
+import { map, take } from 'rxjs/operators';
+import { User } from 'src/app/models/user.model';
+import { AuthService } from 'src/app/services/auth.service';
 import { RecipeService } from 'src/app/services/recipe.service';
 import { Recipe } from '../recipe.model';
 
@@ -20,7 +24,8 @@ export class RecipeDetailComponent implements OnInit {
 
   constructor(private recipeService: RecipeService, 
     private route: ActivatedRoute,
-    private router: Router) {}
+    private router: Router,
+    private authService: AuthService) {}
 
   ngOnInit(): void {
     this.route.params.subscribe(

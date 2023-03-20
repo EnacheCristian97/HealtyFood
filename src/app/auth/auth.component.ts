@@ -4,6 +4,8 @@ import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { AuthResponseData, AuthService } from '../services/auth.service';
 
+
+
 @Component({
   selector: 'app-auth',
   templateUrl: './auth.component.html',
@@ -13,6 +15,7 @@ export class AuthComponent {
   isLoginMode = true;
   isLoading = false;
   error: string = null;
+
 
   constructor(private authService: AuthService, private router: Router) {}
 
@@ -53,4 +56,6 @@ export class AuthComponent {
   onHandleError() {
     this.error =null;
   }
+
+
 }

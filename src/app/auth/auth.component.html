@@ -9,7 +9,8 @@
             <app-loading-spinner></app-loading-spinner>
         </div>
         <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)" *ngIf="!isLoading">
-            <div class="form__logo"></div>
+            <!-- <div class="form__logo"></div> -->
+            <app-logo-parallax></app-logo-parallax> 
             <h3 class="title">{{isLoginMode ? 'Welcome back!' : 'Welcome to our page!'}}</h3>
             <div class="form-group">
                 <label class="form-group__label" for="email">E-Mail</label>

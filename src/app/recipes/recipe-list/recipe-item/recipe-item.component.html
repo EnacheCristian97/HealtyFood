@@ -3,16 +3,18 @@
     routerLinkActive="active"
 >
     <div class="list-group-item" routerLinkActive="active">
+        <div class="image">
             <img class="item-img"
-            src="{{recipe.imgPath}}" 
-            alt="{{recipe.name}}"
-            >
+                src="{{recipe.imgPath}}" 
+                alt="{{recipe.name}}"
+                >
+        </div>    
         <div class="item-desc">
-            <button class="btn-like"><fa-icon [icon]="faHeart"></fa-icon></button>
+            <button class="btn-like" (click)="onAddLike()" type="button"><fa-icon [icon]="faHeart"></fa-icon></button>
             <div class="item-desc-micro">
-                <p class="item-desc-micro__item"><fa-icon [icon]="faTimer"></fa-icon>15 mins</p>
-                <p class="item-desc-micro__item"><fa-icon [icon]="faPlate"></fa-icon>1 servings</p>
-                <p class="item-desc-micro__item"><fa-icon [icon]="faThumbsUp"></fa-icon>12 likes</p> 
+                <p class="item-desc-micro__item"><fa-icon [icon]="faTimer"></fa-icon>{{recipe.time}} mins</p>
+                <p class="item-desc-micro__item"><fa-icon [icon]="faPlate"></fa-icon>{{recipe.servings}} servings</p>
+                <p class="item-desc-micro__item"><fa-icon [icon]="faThumbsUp"></fa-icon>{{recipe.likes}} likes</p> 
             </div>
             <div class="item-desc-info">
                 <p class="title"> {{recipe.name}} </p>

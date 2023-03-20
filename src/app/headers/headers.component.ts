@@ -12,6 +12,7 @@ export class HeadersComponent implements OnInit, OnDestroy {
   isAuthenticated = false;
   private userSub: Subscription;
   userName:string;
+  default = 'Manage';
   
   constructor(private dsService: DataStorageService, private authService: AuthService){}
   

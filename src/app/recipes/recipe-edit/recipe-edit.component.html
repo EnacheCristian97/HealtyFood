@@ -1,3 +1,4 @@
+<div class="backdrop"></div>
 <div class="content">
     <div class="container">
         <form [formGroup]="recipeForm" (ngSubmit)="onSubmit()">
@@ -18,9 +19,21 @@
                 <div class="img-preview">
                     <img [src]="imagePath.value" class="img-responsive">
                 </div>
+                <div>
+                    <label for="time">Preparation time</label>
+                    <input type="text" id="time" formControlName="time">
+                </div>
+                <div>
+                    <label for="servings">Servings</label>
+                    <input type="text" id="servings" formControlName="servings">
+                </div>
                 <div class="desc-form">
-                    <label for="description">Description</label>
+                    <label for="description" maxlength="100">Description</label>
                     <textarea type="text" id="description" rows="6" formControlName="description"></textarea>
+                </div>
+                <div class="desc-form">
+                    <label for="preparationDetail">Preparation Steps</label>
+                    <textarea type="text" rows="6" id="preparationDetail" formControlName="preparationDetail"></textarea>
                 </div>
                 <label for="">Ingredients</label>
                     <div class="row-ing" formArrayName="ingredients">
